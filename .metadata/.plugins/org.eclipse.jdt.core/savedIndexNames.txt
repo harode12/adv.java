@@ -1,0 +1,6 @@
+INDEX VERSION 1.132+D:\Pratikadvjava\.metadata\.plugins\org.eclipse.jdt.core
+892314623.index
+1303381641.index
+2029366761.index
+2888233541.index
+1865797976.index

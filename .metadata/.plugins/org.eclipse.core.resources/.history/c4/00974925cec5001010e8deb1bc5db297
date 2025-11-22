@@ -1,0 +1,14 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public interface ProductDao {
+	static Connection conn=null;
+	
+	public static Connection getMyConnecton() {
+		if(conn==null) {
+			DriverManager.registerDriver(new com.mysql.cj.Driver());
+		}
+	}
+}
