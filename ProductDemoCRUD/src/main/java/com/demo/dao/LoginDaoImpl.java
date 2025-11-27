@@ -11,9 +11,10 @@ public class LoginDaoImpl implements LoginDao {
 	static Connection conn=null;
 	static PreparedStatement seluser;
 	static {
-		conn=DBUtil.getMyConnection();
+		
 		try {
-			seluser=conn.prepareStatement("select uname,email,role from myproduct where uname=? and pass=?");
+			conn=DBUtil.getMyConnection();
+			seluser=conn.prepareStatement("select username,email,role from validate where username=? and password=?");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
