@@ -23,7 +23,7 @@
          <input type="hidden" name="pid" id="pid" value="<%=p.getPid() %>">
          <input type="hidden" name="pname" id="pname" value="<%=p.getPname()%>"/>
          <input type="hidden" name="price" id="price" value="<%=p.getPrice()%>"/>
-         Quantity : <input type="text" name="qty" id="qty"><br/>
+         Quantity : <input type="text" name="qty" id="qty" min="1" required><br/>
          <button type="submit" name="btn" id="btn">Add to cart</button>
       </form>
     </div>

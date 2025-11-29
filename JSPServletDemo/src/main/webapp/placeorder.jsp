@@ -11,9 +11,10 @@
      Set<Product> cart=(Set<Product>)session.getAttribute("cart");
      double totalamt=0;
      %>
+     <% if (cart != null && !cart.isEmpty()) { %>
    <table border='2'>
    <tr>
-       <th>Product id</th>
+       <th>Product pid</th>
        <th>Product name</th>
        <th>order qty</th>
        <th>price</th>
@@ -42,7 +43,12 @@
    </table>
    <form action="payment.jsp">
    <input type="hidden" name="tamt" id="tamt" value=<%=totalamt %>>
-      <button type="submit" name="btn" id="btn">Pay the bill</button>
+      <button type="submit" name="btn" id="btn">Pay the bill</button> 
    </form>
+   <% } else { %>
+        <p>Your cart is empty. Please add items to your cart.</p>
+   <% } %>
+   
+   
 </body>
 </html>
