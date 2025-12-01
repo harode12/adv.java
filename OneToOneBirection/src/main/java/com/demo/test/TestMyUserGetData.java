@@ -14,8 +14,13 @@ public class TestMyUserGetData {
 		Session session=sf.openSession();
 		Transaction tr=session.beginTransaction();
 		System.out.println("before get");
-		MyUserA u1=session.get(MyUserA.class, 12);
-		AddressA a1=session.get(AddressA.class, 24); 
+		MyUserA u1=session.get(MyUserA.class, 16);
+		AddressA a1=session.get(AddressA.class, 9);
+		if (a1 != null) {
+		    System.out.println(a1.getUser1());
+		} else {
+		    System.out.println("No AddressA found");
+		}
 		//MyUser u1=session.load(MyUser.class, 12);
 		System.out.println("after get");
 		
