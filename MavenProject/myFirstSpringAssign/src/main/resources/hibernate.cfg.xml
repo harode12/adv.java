@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xsi:schemaLocation=" http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  calls default constructor of HelloWorld class  -->
+<bean id="f1" class="com.demo.beans.Faculty">
+		<property name="fid" value="001"></property>
+		<property name="fname" value="Kishori Khandilkar"></property>
+	</bean>
+
+	<bean id="s1" class="com.demo.beans.Subject">
+		<property name="subName" value="Adv_Java"></property>
+		<property name="fac" ref="f1"></property>
+	</bean>
+
+	<bean id="m1" class="com.demo.beans.Marks">
+		<property name="mark1" value="79"></property>
+		<property name="tMark" value="100"></property>
+	</bean>
+
+	<bean id="stu1" class="com.demo.beans.Student">
+		<property name="sid" value="0001"></property>
+		<property name="sname" value="Chongu"></property>
+		<property name="m1" ref="m1"></property>
+		<property name="sub1" ref="s1"></property>
+	</bean>
+</beans>
+

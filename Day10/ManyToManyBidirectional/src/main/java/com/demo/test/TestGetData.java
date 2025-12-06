@@ -9,7 +9,6 @@ import com.demo.beans.Employee;
 import com.demo.beans.Project;
 
 public class TestGetData {
-
 	public static void main(String[] args) {
 		SessionFactory sf=new Configuration().configure().buildSessionFactory();
 		Session session=sf.openSession();
